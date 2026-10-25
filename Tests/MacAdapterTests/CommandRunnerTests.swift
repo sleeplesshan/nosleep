@@ -93,11 +93,24 @@ struct CommandRunnerTests {
         }
     }
 
-    @Test func repeatedReadOnlyPowerQueriesReturnKnownStates() async throws {
+    @Test func repeatedReadOnlyPowerQueriesRespectHostCapabilities() async throws {
         let backend = MacPowerBackend()
         for _ in 0..<5 {
-            let state = try await backend.readState()
-            #expect(state == .enabled || state == .disabled)
+            let raw = try await CommandRunner.run("/usr/bin/pmset", ["-g"], timeout: 3)
+            #expect(raw.status == 0)
+            let hasSetting = raw.output.split(whereSeparator: \.isNewline).contains { line in
+                let key = line.split(whereSeparator: \.isWhitespace).first?.lowercased()
+                return key == "sleepdisabled" || key == "disablesleep"
+            }
+            if hasSetting {
+                let state = try await backend.readState()
+                #expect(state == .enabled || state == .disabled)
+            } else {
+                // Hosted virtual Macs can omit this hardware setting. Never infer OFF.
+                await #expect(throws: PowerReadError.missingSetting) {
+                    try await backend.readState()
+                }
+            }
         }
     }
 }
