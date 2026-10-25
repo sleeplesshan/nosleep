@@ -159,8 +159,8 @@ final class AppModel: ObservableObject {
             }
             lidMonitor.markActionSucceeded(at: ProcessInfo.processInfo.systemUptime)
             message = LocalizedMessage(
-                english: lock ? "Lock and display-off requests sent. Locking depends on the standard ⌃⌘Q shortcut." : (brightnessDimmed ? "Built-in brightness is zero. Move the pointer or use the brightness-up key to restore." : "Brightness restored."),
-                korean: lock ? "잠금과 화면 끄기를 요청했습니다. 잠금은 기본 단축키 ⌃⌘Q를 사용합니다." : (brightnessDimmed ? "내장 디스플레이 밝기를 0으로 낮췄습니다. 마우스를 움직이거나 밝기 증가 키로 복원하세요." : "밝기를 복원했습니다."), isError: false)
+                english: lock ? "Lock and display-off requested." : (brightnessDimmed ? "Built-in brightness is zero. Move the pointer or use the brightness-up key to restore." : "Brightness restored."),
+                korean: lock ? "잠금과 디스플레이 끄기를 요청했습니다." : (brightnessDimmed ? "내장 디스플레이 밝기를 0으로 낮췄습니다. 마우스를 움직이거나 밝기 증가 키로 복원하세요." : "밝기를 복원했습니다."), isError: false)
         } catch { report(error) }
     }
 
