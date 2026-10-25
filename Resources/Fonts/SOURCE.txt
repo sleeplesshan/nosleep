@@ -1,0 +1,11 @@
+Paperlogy 1.001 — original, unmodified font files
+Source: https://github.com/Freesentation/paperlogy
+Commit: 8ef35f53b318c7ca914c52b1b382b9a8bad07a61
+Archive: https://raw.githubusercontent.com/Freesentation/paperlogy/8ef35f53b318c7ca914c52b1b382b9a8bad07a61/Paperlogy-1.001.zip
+License: SIL Open Font License 1.1 (see OFL-license.txt)
+
+SHA-256:
+05e1021e3de620dddc97875342e2be1a94c5f8e9b9f792bd16c4c1d0085343b3  Paperlogy-4Regular.ttf
+f3c97ace885bb7d2a53a73dc71d832fa79988d5f546c2562abbb87aa07492f4b  Paperlogy-5Medium.ttf
+ca92034a1c4602a57c55434dfdbf8428a0bb88ac84a99a5effec1a41f0118127  Paperlogy-6SemiBold.ttf
+7effb892621474e9c2a9112f482eb87dd25b65a470e5ae5971be5a68d89ad89b  Paperlogy-7Bold.ttf
