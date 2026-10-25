@@ -16,7 +16,17 @@ Mac의 잠자기 금지, 화면 끄기, 덮개를 닫을 때의 동작을 한 �
 - 한국어·영어를 즉시 전환하고 시스템의 밝은·어두운 모드를 따릅니다.
 - 계정, 분석 도구, 네트워크 연결, 외부 런타임 없이 로컬에서 실행됩니다.
 
-## 빌드 및 실행
+## 다운로드
+
+**[Apple Silicon용 Sleeplesshan 다운로드](https://github.com/sleeplesshan/nosleep/releases/latest/download/Sleeplesshan-0.1.0-macOS-arm64.zip)** · [전체 릴리스](https://github.com/sleeplesshan/nosleep/releases)
+
+macOS 14 이상, M 시리즈 Mac용입니다. ZIP 압축을 풀고 `Sleeplesshan.app`을 응용 프로그램 폴더로 옮기면 됩니다. **Xcode 설치나 소스 빌드는 필요하지 않습니다.** 이번 릴리스에는 Intel용 바이너리가 포함되지 않습니다.
+
+이번 파일은 ad-hoc 서명이며 **Apple Developer ID 서명·공증은 없습니다.** 첫 실행 시 macOS가 차단할 수 있습니다. 배포본을 신뢰하여 실행하기로 선택한 경우 [Apple의 앱 실행 안내](https://support.apple.com/ko-kr/102445)를 따르세요. 릴리스에 설치 안내와 SHA-256 체크섬을 제공합니다.
+
+잠금 기능에는 손쉬운 사용 권한, 잠자기 금지 변경에는 관리자 인증이 필요할 수 있습니다. 업데이트할 때는 기존 앱을 종료하고 같은 위치에 교체하세요. ad-hoc 빌드가 변경되면 손쉬운 사용 권한에 앱을 다시 추가해야 할 수 있습니다.
+
+## 소스에서 빌드 및 실행
 
 macOS 14 이상, Swift 6 도구 체인을 포함한 Xcode가 필요합니다. 첫 버전의 실제 실행 검증 대상은 Apple Silicon Mac입니다.
 

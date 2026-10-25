@@ -14,5 +14,5 @@ jobs:
         run: swift --version
       - name: Unit and process-adapter tests
         run: swift test
-      - name: Build local app bundle
-        run: bash scripts/build.sh
+      - name: Build and package downloadable app
+        run: bash scripts/package.sh

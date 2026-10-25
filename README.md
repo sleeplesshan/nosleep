@@ -2,7 +2,7 @@
 
 A small macOS control panel for keeping your Mac awake, turning displays off, and choosing what happens when you close the lid.
 
-[한국어](README.ko.md) · [Build and test](#build) · [Behavior and verification](docs/verification.md)
+[한국어](README.ko.md) · [Download](#download) · [Build and test](#build-from-source) · [Behavior and verification](docs/verification.md)
 
 <img src="docs/images/sleeplesshan-en.png" alt="Sleeplesshan in English, dark appearance" width="520">
 
@@ -15,7 +15,17 @@ A small macOS control panel for keeping your Mac awake, turning displays off, an
 - Switches every user-facing control between English and Korean immediately. Follows system light/dark appearance.
 - Runs locally, without accounts, analytics, network access, or third-party runtime dependencies.
 
-## Build
+## Download
+
+**[Download Sleeplesshan for Apple Silicon](https://github.com/sleeplesshan/nosleep/releases/latest/download/Sleeplesshan-0.1.0-macOS-arm64.zip)** · [All releases](https://github.com/sleeplesshan/nosleep/releases)
+
+macOS 14 or later, M-series Mac. Download the ZIP, unzip it, and drag `Sleeplesshan.app` into Applications. No Xcode or source build is needed. Intel binaries are not included in this release.
+
+This download is ad-hoc signed, **not Developer ID signed or Apple notarized**. macOS may block its first launch. If you choose to trust the release, follow [Apple’s app-opening guidance](https://support.apple.com/en-us/102445). Installation instructions and a SHA-256 checksum are included with the release.
+
+For lock-and-display-off, allow Accessibility access. Sleep-prevention changes may request administrator authentication. Quit the existing app before updating; keep the same install location. An updated ad-hoc build may require re-adding Accessibility permission.
+
+## Build from source
 
 Requires macOS 14 or later and Xcode with a Swift 6 toolchain. The first version is tested on Apple Silicon; other hardware and OS versions require verification.
 
