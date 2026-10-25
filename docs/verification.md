@@ -56,4 +56,5 @@ Brightness uses guarded DisplayServices SPI on supported built-in panels. A reco
 - The user confirmed a password was required when returning from the lock-and-display-off check. This verifies this Mac’s observed behavior, not all shortcut or password-policy configurations.
 - The previous lid watcher was backed up and stopped; its launch service was absent after migration. The unrelated idle-sleep agent was preserved.
 - English and Korean controls, bundled Paperlogy fonts, and dark appearance were inspected. Login registration was enabled in the installed app.
-- Still pending physical acceptance: closing/reopening the lid while work runs, external-monitor behavior, a real logout/login cycle, full keyboard traversal and VoiceOver, and light appearance. These are not covered by the automated-test result.
+- A native IORegistry observer recorded open → closed → open, with the lid closed for about 19 seconds. The observer continued throughout (maximum sample interval under 1.5 seconds). The user confirmed authentication was required after reopening the lid.
+- Still pending physical acceptance: external-monitor behavior, a real logout/login cycle, full keyboard traversal and VoiceOver, and light appearance. These are not covered by the automated-test result.
